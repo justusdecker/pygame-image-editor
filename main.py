@@ -1,6 +1,6 @@
 import pygame as pg
 from time import perf_counter
-DEFAULT_BACKGROUND_COLOR = pg.Color("#242424")
+from bin.constants import DEFAULT_BACKGROUND_COLOR
 class App:
     delta_time = 0
     def __init__(self,
@@ -11,7 +11,7 @@ class App:
     def run(self):
         while self.is_running:
             start_time = perf_counter()
-            self.WINDOW.fill()
+            self.WINDOW.fill(DEFAULT_BACKGROUND_COLOR)
             self.update()
             self.check_events()
             self.delta_time = perf_counter() - start_time
