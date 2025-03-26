@@ -8,7 +8,7 @@ class File:
                 fromfile: str | None = None):
         self.surface_size = surface_size
         self.color_mode = color_mode
-        self.layers = [Layer([30,30],[0,0])]
+        self.layers = [Layer([1280,720],[0,0])]
         self.default_background_color = DEFAULT_BACKGROUND_COLOR
         self.title = "Untitled"
         
@@ -21,4 +21,5 @@ class File:
         for layer in self.layers:
             self.surface.blit(*layer.get_surface())
         return self.surface
+    
     
